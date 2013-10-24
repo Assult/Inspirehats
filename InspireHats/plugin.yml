@@ -1,0 +1,5 @@
+name: InspireHats
+version: 1.0
+main: me.inspire.hat.Main
+commands:
+ hat:
