@@ -15,7 +15,8 @@ public class Main extends JavaPlugin {
 	public Main plugin;
 
 	public void onEnable() {
-
+		PluginManager pm = Bukkit.getPluginManager();
+		pm.registerEvents(new ClickEvent(), this);
 	}
 
 	public void onDisable() {
@@ -53,6 +54,13 @@ public class Main extends JavaPlugin {
 									+ ChatColor.GREEN + args[0] + ChatColor.RED
 									+ " hat");
 							System.out.println("arg:" + args[0]);
+						}else{
+							player.sendMessage(ChatColor.DARK_BLUE + "["
+                                    + ChatColor.GOLD + "Inspire Hats"
+                                    + ChatColor.DARK_BLUE + "] "
+                                    + ChatColor.RED + "You don't have permission to use a  "
+                                    + ChatColor.GREEN + args[0] + ChatColor.RED
+                                    + " hat");
 						}
 					}
 
